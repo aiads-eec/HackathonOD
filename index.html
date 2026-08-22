@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI & DS — On-Duty Application</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --maroon: #4a2226;
+    --maroon-dark: #2f1518;
+    --cream: #faf7f2;
+    --ink: #241012;
+    --ink-dim: #6b5457;
+  }
+
+  *{ box-sizing: border-box; }
+
+  body{
+    margin:0;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  header img{
+    display:block;
+    width: 100%;
+    height: auto;
+  }
+
+  main{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+    text-align: center;
+  }
+
+  h1{
+    font-size: clamp(24px, 4vw, 32px);
+    margin: 0 0 14px;
+    color: var(--maroon-dark);
+  }
+
+  p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink-dim);
+    max-width: 520px;
+    margin: 0 auto 32px;
+  }
+
+  .apply-btn{
+    display: inline-block;
+    background: var(--maroon);
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 16px 36px;
+    border-radius: 6px;
+    transition: background .15s ease, transform .15s ease;
+  }
+
+  .apply-btn:hover{
+    background: var(--maroon-dark);
+    transform: translateY(-1px);
+  }
+
+  footer{
+    text-align:center;
+    padding: 24px;
+    font-size: 13px;
+    color: var(--ink-dim);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="assets/header-banner.png" alt="Department of Artificial Intelligence & Data Science, Easwari Engineering College">
+</header>
+
+<main>
+  <h1>On-Duty Application</h1>
+  <p>
+    Participating in a hackathon or other official event during class hours?
+    Fill the On-Duty (OD) form below to get your absence approved and recorded.
+  </p>
+  <a class="apply-btn" href="https://forms.gle/XCXGhZABTUHrdoRt8" target="_blank" rel="noopener">
+    Apply for OD →
+  </a>
+</main>
+
+<footer>
+  Department of Artificial Intelligence & Data Science · Easwari Engineering College
+</footer>
+
+</body>
+</html>
