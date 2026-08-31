@@ -2,675 +2,473 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Department of AIADS Student Services Portal - Easwari Engineering College"
-  >
+  <title>AI&DS Student Management Portal</title>
 
-  <title>AI&DS Student Services | Easwari Engineering College</title>
+  <meta name="description"
+        content="AI&DS Student Management Portal - Easwari Engineering College">
 
   <style>
-
-    /* =====================================================
-       RESET
-       ===================================================== */
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-
-    /* =====================================================
-       BODY
-       ===================================================== */
-
     body {
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-      background: #f7f5f5;
-
-      color: #333;
-
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f9;
+      color: #1f2937;
       min-height: 100vh;
-
-      display: flex;
-      flex-direction: column;
     }
 
-
-    /* =====================================================
+    /* =========================
        HEADER
-       IMPORTANT:
-       The complete header-banner.png is displayed.
-       No cropping.
-       ===================================================== */
+       ========================= */
 
     .header {
       width: 100%;
-
       background: #ffffff;
-
-      box-shadow:
-        0 2px 10px rgba(0, 0, 0, 0.10);
-
-      position: relative;
-
-      z-index: 10;
-
-      overflow: hidden;
-
+      padding: 18px 20px 10px;
       text-align: center;
     }
-
 
     .header img {
-      display: block;
-
       width: 100%;
-
-      height: auto;
-
-      max-width: 100%;
-
-      max-height: none;
-
-      object-fit: contain;
-
-      object-position: center;
-
-      margin: 0 auto;
-    }
-
-
-    /* =====================================================
-       MAIN
-       ===================================================== */
-
-    main {
-      flex: 1;
-
-      width: 100%;
-
       max-width: 1100px;
-
+      height: auto;
+      display: block;
       margin: 0 auto;
-
-      padding:
-        45px 20px 60px;
-    }
-
-
-    /* =====================================================
-       WELCOME
-       ===================================================== */
-
-    .welcome {
-      text-align: center;
-
-      margin-bottom: 40px;
-    }
-
-
-    .welcome h1 {
-      color: #633030;
-
-      font-size:
-        clamp(28px, 5vw, 42px);
-
-      font-weight: 700;
-
-      margin-bottom: 12px;
-
-      letter-spacing: -0.5px;
-    }
-
-
-    .welcome p {
-      max-width: 760px;
-
-      margin: 0 auto;
-
-      color: #666;
-
-      font-size: 16px;
-
-      line-height: 1.7;
-    }
-
-
-    /* =====================================================
-       SERVICE CARDS
-       ===================================================== */
-
-    .services {
-      display: grid;
-
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-      gap: 28px;
-
-      max-width: 900px;
-
-      margin: 0 auto;
-    }
-
-
-    .service-card {
-      background: #ffffff;
-
       border-radius: 18px;
+      object-fit: contain;
+    }
 
-      padding:
-        35px 30px;
+    /* =========================
+       TITLE
+       ========================= */
 
+    .title-section {
       text-align: center;
+      padding: 28px 20px 18px;
+    }
 
-      box-shadow:
-        0 8px 25px rgba(75, 35, 35, 0.12);
+    .title-section h1 {
+      font-size: 30px;
+      font-weight: 700;
+      color: #172554;
+      margin-bottom: 8px;
+    }
 
-      border:
-        1px solid #eeeeee;
+    .title-section p {
+      font-size: 16px;
+      color: #64748b;
+    }
 
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    /* =========================
+       MAIN CONTAINER
+       ========================= */
 
+    .container {
+      width: 100%;
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 10px 20px 50px;
+    }
+
+    /* =========================
+       CARDS
+       ========================= */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 15px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 32px 25px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+      transition: all 0.25s ease;
       display: flex;
-
       flex-direction: column;
-
-      align-items: center;
-
-      min-height: 330px;
+      justify-content: space-between;
+      min-height: 320px;
     }
 
-
-    .service-card:hover {
-      transform:
-        translateY(-6px);
-
-      box-shadow:
-        0 14px 35px rgba(75, 35, 35, 0.18);
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.14);
     }
-
-
-    /* =====================================================
-       ICON
-       ===================================================== */
 
     .icon {
-      width: 82px;
-
-      height: 82px;
-
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px;
       border-radius: 50%;
-
-      background:
-        #6b3030;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
-      font-size: 40px;
-
-      margin-bottom: 22px;
-
-      box-shadow:
-        0 6px 15px rgba(107, 48, 48, 0.25);
+      font-size: 34px;
+      background: #eff6ff;
     }
 
-
-    /* =====================================================
-       CARD TITLE
-       ===================================================== */
-
-    .service-card h2 {
-      color: #633030;
-
-      font-size: 25px;
-
-      margin-bottom: 12px;
-
-      font-weight: 700;
+    .card h2 {
+      color: #172554;
+      font-size: 21px;
+      line-height: 1.35;
+      margin-bottom: 13px;
     }
 
-
-    /* =====================================================
-       CARD DESCRIPTION
-       ===================================================== */
-
-    .service-card p {
-      color: #666;
-
-      line-height: 1.65;
-
+    .card p {
+      color: #64748b;
       font-size: 15px;
-
-      max-width: 360px;
-
+      line-height: 1.6;
       margin-bottom: 25px;
-
-      flex: 1;
     }
 
-
-    /* =====================================================
-       BUTTON
-       ===================================================== */
-
-    .btn {
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      gap: 8px;
-
-      background:
-        #6b3030;
-
-      color:
-        #ffffff;
-
+    .button {
+      display: inline-block;
+      width: 100%;
+      padding: 13px 18px;
+      border-radius: 10px;
       text-decoration: none;
-
-      padding:
-        13px 26px;
-
-      border-radius: 8px;
-
+      color: #ffffff;
       font-size: 15px;
-
       font-weight: 600;
-
-      min-width: 190px;
-
-      transition:
-        background 0.2s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+      transition: 0.2s ease;
     }
 
-
-    .btn:hover {
-      background:
-        #4f2424;
-
-      transform:
-        translateY(-2px);
-
-      box-shadow:
-        0 5px 12px rgba(79, 36, 36, 0.25);
+    .button:hover {
+      opacity: 0.9;
+      transform: scale(1.01);
     }
 
+    /* OD */
 
-    .btn:active {
-      transform:
-        translateY(0);
+    .od .icon {
+      background: #e0f2fe;
     }
 
+    .od .button {
+      background: #0369a1;
+    }
 
-    /* =====================================================
+    /* ACHIEVEMENTS */
+
+    .achievement .icon {
+      background: #fef3c7;
+    }
+
+    .achievement .button {
+      background: #b45309;
+    }
+
+    /* COMPETITIONS */
+
+    .competition .icon {
+      background: #dcfce7;
+    }
+
+    .competition .button {
+      background: #15803d;
+    }
+
+    /* =========================
        INFORMATION SECTION
-       ===================================================== */
+       ========================= */
 
     .info-section {
-      margin:
-        50px auto 0;
-
-      max-width: 900px;
-
-      background:
-        #ffffff;
-
-      border-radius:
-        15px;
-
-      padding:
-        25px 30px;
-
-      border-left:
-        5px solid #6b3030;
-
-      box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.07);
+      margin-top: 35px;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
     }
 
-
-    .info-section h3 {
-      color:
-        #633030;
-
-      margin-bottom:
-        10px;
-
-      font-size:
-        20px;
+    .info-section h2 {
+      text-align: center;
+      color: #172554;
+      margin-bottom: 18px;
+      font-size: 21px;
     }
 
-
-    .info-section p {
-      color:
-        #666;
-
-      line-height:
-        1.7;
-
-      font-size:
-        14px;
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
+    .step {
+      text-align: center;
+      padding: 15px;
+    }
 
-    /* =====================================================
+    .step-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #172554;
+      color: #ffffff;
+      margin: 0 auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .step h3 {
+      font-size: 16px;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    .step p {
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* =========================
        FOOTER
-       ===================================================== */
+       ========================= */
 
     footer {
-      background:
-        #4f2929;
-
-      color:
-        rgba(255, 255, 255, 0.9);
-
-      text-align:
-        center;
-
-      padding:
-        20px 15px;
-
-      font-size:
-        13px;
-
-      line-height:
-        1.6;
+      text-align: center;
+      background: #172554;
+      color: #ffffff;
+      padding: 22px 15px;
+      margin-top: 25px;
     }
-
 
     footer strong {
-      color:
-        #ffffff;
+      font-size: 15px;
     }
 
+    footer p {
+      margin-top: 6px;
+      font-size: 13px;
+      opacity: 0.85;
+    }
 
-    /* =====================================================
-       TABLET
-       ===================================================== */
+    /* =========================
+       MOBILE
+       ========================= */
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
 
-      .services {
-        grid-template-columns:
-          1fr;
+      .cards {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-        max-width:
-          550px;
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .title-section h1 {
+        font-size: 25px;
       }
 
     }
-
-
-    /* =====================================================
-       MOBILE
-       ===================================================== */
 
     @media (max-width: 600px) {
 
       .header {
-        overflow:
-          hidden;
+        padding: 10px 10px 5px;
       }
-
 
       .header img {
-        width:
-          100%;
-
-        height:
-          auto;
-
-        max-width:
-          100%;
-
-        object-fit:
-          contain;
+        border-radius: 12px;
       }
 
-
-      main {
-        padding:
-          30px 16px 45px;
+      .title-section {
+        padding: 22px 15px 12px;
       }
 
-
-      .welcome {
-        margin-bottom:
-          30px;
+      .title-section h1 {
+        font-size: 22px;
       }
 
-
-      .welcome h1 {
-        font-size:
-          29px;
+      .title-section p {
+        font-size: 14px;
       }
 
-
-      .welcome p {
-        font-size:
-          14px;
-
-        line-height:
-          1.6;
+      .container {
+        padding: 5px 14px 35px;
       }
 
-
-      .service-card {
-        min-height:
-          300px;
-
-        padding:
-          30px 22px;
+      .card {
+        min-height: auto;
+        padding: 28px 20px;
       }
-
-
-      .service-card h2 {
-        font-size:
-          23px;
-      }
-
-
-      .service-card p {
-        font-size:
-          14px;
-      }
-
 
       .info-section {
-        padding:
-          22px 20px;
-
-        margin-top:
-          35px;
+        padding: 20px 16px;
       }
 
     }
-
-
-    /* =====================================================
-       SMALL MOBILE
-       ===================================================== */
-
-    @media (max-width: 400px) {
-
-      .service-card h2 {
-        font-size:
-          22px;
-      }
-
-
-      .icon {
-        width:
-          70px;
-
-        height:
-          70px;
-
-        font-size:
-          34px;
-      }
-
-
-      .btn {
-        width:
-          100%;
-
-        min-width:
-          0;
-      }
-
-    }
-
   </style>
-
 </head>
-
 
 <body>
 
-
   <!-- =====================================================
-       EXISTING GOOGLE FORM HEADER
+       HEADER / BANNER
        ===================================================== -->
 
   <header class="header">
 
+    <!--
+      Replace the image below with your existing
+      GitHub banner/header image if the filename is different.
+
+      Example:
+      images/header.png
+    -->
+
     <img
-      src="header-banner.png"
-      alt="Department of Artificial Intelligence and Data Science - Easwari Engineering College"
+      src="images/header.png"
+      alt="Easwari Engineering College - Artificial Intelligence and Data Science"
     >
 
   </header>
 
 
-
   <!-- =====================================================
-       MAIN CONTENT
+       TITLE
        ===================================================== -->
 
-  <main>
+  <section class="title-section">
+
+    <h1>AI&DS Student Management Portal</h1>
+
+    <p>
+      Department of Artificial Intelligence and Data Science
+    </p>
+
+  </section>
 
 
-    <!-- ===================================================
-         WELCOME
-         =================================================== -->
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
 
-    <section class="welcome">
+  <main class="container">
 
-      <h1>
-        AI&amp;DS Student Services
-      </h1>
-
-      <p>
-        Welcome to the Department of Artificial Intelligence
-        &amp; Data Science Student Services Portal.
-        Please select the required service below.
-      </p>
-
-    </section>
+    <section class="cards">
 
 
-
-    <!-- ===================================================
-         SERVICE CARDS
-         =================================================== -->
-
-    <section class="services">
-
-
-      <!-- ================================================
+      <!-- =================================================
            APPLY FOR OD
-           ================================================ -->
+           ================================================= -->
 
-      <div class="service-card">
+      <div class="card od">
 
-        <div class="icon">
-          📄
+        <div>
+
+          <div class="icon">
+            📋
+          </div>
+
+          <h2>
+            Apply for OD
+          </h2>
+
+          <p>
+            Submit your On-Duty request for hackathons,
+            competitions, training, internships, industry visits
+            and other approved academic activities.
+          </p>
+
         </div>
 
-
-        <h2>
-          Apply for OD
-        </h2>
-
-
-        <p>
-          Apply for On-Duty permission for Hackathons,
-          Competitions, Training, Internships, Industry
-          Visits and other approved academic activities.
-        </p>
-
-
         <a
-          class="btn"
+          class="button"
           href="https://forms.gle/6eKPANzMJVGWUU9r9"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Apply for OD
-          <span>→</span>
+          Apply for OD →
         </a>
 
       </div>
 
 
+      <!-- =================================================
+           ACHIEVEMENTS DATABASE
+           ================================================= -->
 
-      <!-- ================================================
-           ACHIEVEMENT SUBMISSION
-           ================================================ -->
+      <div class="card achievement">
 
-      <div class="service-card">
+        <div>
 
-        <div class="icon">
-          🏆
+          <div class="icon">
+            🏆
+          </div>
+
+          <h2>
+            Achievements Database
+          </h2>
+
+          <p>
+            Submit your certificates and achievements.
+            The system extracts certificate details and maintains
+            the centralized AI&DS student achievement database.
+          </p>
+
         </div>
 
-
-        <h2>
-          Submit Achievement
-        </h2>
-
-
-        <p>
-          Submit your achievement certificate for
-          departmental records. The system extracts
-          important details from the certificate and
-          adds them to the AI&amp;DS Achievement Database.
-        </p>
-
-
         <a
-          class="btn"
+          class="button"
           href="https://forms.gle/6YXJ4BQG5Kd3FS7D8"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Submit Achievement
-          <span>→</span>
+          Submit Achievement →
+        </a>
+
+      </div>
+
+
+      <!-- =================================================
+           INSTITUTE LEVEL COMPETITIONS
+           ================================================= -->
+
+      <div class="card competition">
+
+        <div>
+
+          <div class="icon">
+            🏅
+          </div>
+
+          <h2>
+            Institute Level Competitions Database
+          </h2>
+
+          <p>
+            Submit and maintain details of institute-level
+            competitions, events and participation opportunities
+            for AI&DS students.
+          </p>
+
+        </div>
+
+        <a
+          class="button"
+          href="https://forms.gle/eh93RBzv1EeGwN8U6"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Competition Form →
         </a>
 
       </div>
@@ -679,34 +477,77 @@
     </section>
 
 
-
-    <!-- ===================================================
-         IMPORTANT INFORMATION
-         =================================================== -->
+    <!-- =====================================================
+         HOW IT WORKS
+         ===================================================== -->
 
     <section class="info-section">
 
-      <h3>
-        📌 Important
-      </h3>
+      <h2>
+        How to Use the Portal
+      </h2>
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="step-number">
+            1
+          </div>
+
+          <h3>
+            Select the Required Service
+          </h3>
+
+          <p>
+            Choose OD, Achievements Database or
+            Institute Level Competitions Database.
+          </p>
+
+        </div>
 
 
-      <p>
-        Students are requested to enter their details
-        accurately and upload clear and complete
-        supporting documents. For achievement submissions,
-        please upload <strong>one certificate for one
-        achievement</strong>. Ensure that the certificate
-        is readable and contains the student's name,
-        event details and achievement information wherever
-        applicable.
-      </p>
+        <div class="step">
+
+          <div class="step-number">
+            2
+          </div>
+
+          <h3>
+            Complete the Google Form
+          </h3>
+
+          <p>
+            Enter the required student and event details
+            carefully and upload supporting documents where required.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            3
+          </div>
+
+          <h3>
+            Submit
+          </h3>
+
+          <p>
+            Submit the form and wait for the respective
+            verification or approval process.
+          </p>
+
+        </div>
+
+      </div>
 
     </section>
 
 
   </main>
-
 
 
   <!-- =====================================================
@@ -716,16 +557,16 @@
   <footer>
 
     <strong>
-      Department of Artificial Intelligence &amp; Data Science
+      Department of Artificial Intelligence and Data Science
     </strong>
 
-    <br>
+    <p>
+      Easwari Engineering College, Chennai
+    </p>
 
-    Easwari Engineering College
-
-    <br>
-
-    © 2026 AI&amp;DS Department. All Rights Reserved.
+    <p>
+      AI&DS Student Management Portal
+    </p>
 
   </footer>
 
