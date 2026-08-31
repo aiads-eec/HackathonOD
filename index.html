@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>AI&DS Student Portal | Easwari Engineering College</title>
 
@@ -13,216 +11,334 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fb;
-      color: #222;
+      background: #f1f3f4;
+      color: #202124;
     }
 
-    /* HEADER */
-    .header {
+    /* =====================================================
+       HEADER / BANNER
+       ===================================================== */
+
+    .banner {
+      width: 100%;
       background: #ffffff;
-      padding: 18px 20px;
-      border-bottom: 1px solid #ddd;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      overflow: hidden;
     }
 
-    .header img {
-      max-width: 100%;
-      width: 900px;
-      height: auto;
+    .banner img {
       display: block;
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    /* =====================================================
+       PORTAL HEADER
+       ===================================================== */
+
+    .portal-header {
+      background: #ffffff;
+      border-top: 6px solid #673ab7;
+      border-bottom: 1px solid #dadce0;
+    }
+
+    .portal-header-inner {
+      max-width: 1100px;
       margin: auto;
-    }
-
-    /* HERO */
-    .hero {
+      padding: 22px 25px;
       text-align: center;
-      padding: 35px 20px 20px;
     }
 
-    .hero h1 {
-      margin: 0;
-      font-size: 30px;
-      color: #17365d;
+    .college-name {
+      font-size: 21px;
+      font-weight: 700;
+      color: #333333;
+      margin-bottom: 7px;
     }
 
-    .hero p {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #666;
+    .department-name {
+      font-size: 17px;
+      font-weight: 600;
+      color: #673ab7;
     }
 
-    /* CONTAINER */
+    .portal-title {
+      margin-top: 12px;
+      font-size: 28px;
+      font-weight: 700;
+      color: #202124;
+    }
+
+    .portal-description {
+      margin: 8px auto 0;
+      max-width: 750px;
+      color: #5f6368;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* =====================================================
+       MAIN
+       ===================================================== */
+
     .container {
       max-width: 1100px;
-      margin: 20px auto 50px;
+      margin: 30px auto 50px;
       padding: 0 20px;
     }
 
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
     }
 
-    /* CARD */
+    .section-title h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #202124;
+    }
+
+    .section-title p {
+      margin: 8px 0 0;
+      color: #5f6368;
+      font-size: 15px;
+    }
+
+    /* =====================================================
+       CARDS
+       ===================================================== */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
     .card {
       background: #ffffff;
-      border-radius: 14px;
+      border: 1px solid #dadce0;
+      border-radius: 12px;
       padding: 30px 25px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
       text-align: center;
-      transition: transform 0.2s ease,
-                  box-shadow 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .card.highlight {
+      grid-column: 1 / -1;
+      border-top: 7px solid #673ab7;
     }
 
     .icon {
-      font-size: 42px;
+      font-size: 43px;
       margin-bottom: 12px;
     }
 
-    .card h2 {
+    .card h3 {
       margin: 5px 0 12px;
-      color: #17365d;
-      font-size: 22px;
+      font-size: 21px;
+      color: #202124;
     }
 
     .card p {
-      color: #666;
-      line-height: 1.6;
-      min-height: 70px;
+      margin: 0 auto 20px;
+      max-width: 650px;
+      min-height: 65px;
+      color: #5f6368;
+      font-size: 15px;
+      line-height: 1.65;
     }
+
+    /* =====================================================
+       BUTTON
+       ===================================================== */
 
     .button {
       display: inline-block;
-      margin-top: 15px;
       padding: 13px 28px;
-      background: #17365d;
-      color: white;
+      background: #673ab7;
+      color: #ffffff;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
       transition: background 0.2s ease;
     }
 
     .button:hover {
-      background: #0d2847;
+      background: #512da8;
     }
 
-    /* IMPORTANT CARD */
-    .important {
-      grid-column: 1 / -1;
-      border: 2px solid #17365d;
+    /* =====================================================
+       INSTRUCTIONS
+       ===================================================== */
+
+    .instructions {
+      margin-top: 25px;
+      background: #ffffff;
+      border: 1px solid #dadce0;
+      border-radius: 12px;
+      padding: 25px;
     }
 
-    .important .button {
-      background: #17365d;
+    .instructions h3 {
+      margin: 0 0 12px;
+      color: #673ab7;
+      font-size: 19px;
     }
 
-    /* FOOTER */
-    .footer {
-      text-align: center;
-      background: #17365d;
-      color: white;
-      padding: 22px 15px;
+    .instructions ol {
+      margin: 0;
+      padding-left: 23px;
+      color: #5f6368;
+      line-height: 1.8;
       font-size: 14px;
+    }
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    .footer {
+      background: #202124;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 14px;
+      line-height: 1.7;
     }
 
     .footer strong {
       font-size: 15px;
     }
 
-    /* MOBILE */
+    /* =====================================================
+       MOBILE
+       ===================================================== */
+
     @media (max-width: 700px) {
 
-      .header {
-        padding: 12px;
-      }
-
-      .header img {
+      .banner img {
+        max-height: 180px;
         width: 100%;
+        object-fit: contain;
       }
 
-      .hero {
-        padding-top: 25px;
+      .portal-header-inner {
+        padding: 18px 15px;
       }
 
-      .hero h1 {
-        font-size: 24px;
+      .college-name {
+        font-size: 17px;
       }
 
-      .grid {
+      .department-name {
+        font-size: 15px;
+      }
+
+      .portal-title {
+        font-size: 23px;
+      }
+
+      .portal-description {
+        font-size: 14px;
+      }
+
+      .container {
+        margin-top: 22px;
+        padding: 0 14px;
+      }
+
+      .cards {
         grid-template-columns: 1fr;
       }
 
-      .important {
+      .card.highlight {
         grid-column: auto;
       }
 
       .card {
-        padding: 25px 20px;
+        padding: 25px 18px;
       }
+
+      .card h3 {
+        font-size: 19px;
+      }
+
+      .card p {
+        min-height: auto;
+      }
+
     }
   </style>
 </head>
 
 <body>
 
+
   <!-- =====================================================
-       HEADER
+       GOOGLE FORM HEADER / BANNER
        ===================================================== -->
 
-  <header class="header">
-
-    <!--
-      IMPORTANT:
-      Replace the image URL below with the actual
-      header/banner image used in your existing site.
-
-      If your existing repository already contains
-      header.png, use:
-
-      src="header.png"
-
-      If the file is inside images folder:
-
-      src="images/header.png"
-    -->
+  <div class="banner">
 
     <img
-      src="header.png"
-      alt="Easwari Engineering College - AI&DS"
-      onerror="this.style.display='none';"
+      src="assets/header.png"
+      alt="Easwari Engineering College - Department of AI&DS"
     >
 
-  </header>
+  </div>
 
 
   <!-- =====================================================
-       HERO
+       PORTAL HEADER
        ===================================================== -->
 
-  <section class="hero">
+  <header class="portal-header">
 
-    <h1>
-      AI&DS Student Portal
-    </h1>
+    <div class="portal-header-inner">
 
-    <p>
-      Department of Artificial Intelligence and Data Science
-      <br>
-      Easwari Engineering College
-    </p>
+      <div class="college-name">
+        Easwari Engineering College
+      </div>
 
-  </section>
+      <div class="department-name">
+        Department of Artificial Intelligence and Data Science
+      </div>
+
+      <div class="portal-title">
+        AI&DS Student Portal
+      </div>
+
+      <div class="portal-description">
+        Centralized portal for On-Duty applications,
+        student achievements and institute-level
+        competitions.
+      </div>
+
+    </div>
+
+  </header>
 
 
   <!-- =====================================================
@@ -231,11 +347,25 @@
 
   <main class="container">
 
-    <div class="grid">
+
+    <div class="section-title">
+
+      <h2>
+        Student Services
+      </h2>
+
+      <p>
+        Select the required service below
+      </p>
+
+    </div>
+
+
+    <div class="cards">
 
 
       <!-- =================================================
-           1. ON DUTY
+           APPLY FOR OD
            ================================================= -->
 
       <div class="card">
@@ -244,9 +374,9 @@
           📋
         </div>
 
-        <h2>
+        <h3>
           Apply for On-Duty
-        </h2>
+        </h3>
 
         <p>
           Submit your On-Duty request for hackathons,
@@ -267,7 +397,7 @@
 
 
       <!-- =================================================
-           2. ACHIEVEMENT DATABASE
+           ACHIEVEMENT DATABASE
            ================================================= -->
 
       <div class="card">
@@ -276,14 +406,14 @@
           🏆
         </div>
 
-        <h2>
+        <h3>
           Student Achievements
-        </h2>
+        </h3>
 
         <p>
-          Submit your certificates and achievements.
-          The system captures achievement details and
-          maintains the AI&DS Achievement Database.
+          Submit certificates and achievement details
+          for inclusion in the AI&DS Student Achievement
+          Database.
         </p>
 
         <a
@@ -299,23 +429,24 @@
 
 
       <!-- =================================================
-           3. INSTITUTE LEVEL COMPETITIONS
+           INSTITUTE LEVEL COMPETITIONS
            ================================================= -->
 
-      <div class="card important">
+      <div class="card highlight">
 
         <div class="icon">
           🎯
         </div>
 
-        <h2>
+        <h3>
           Institute Level Competitions Database
-        </h2>
+        </h3>
 
         <p>
           Submit details of institute-level competitions,
-          contests, hackathons and other competitive events
-          conducted or participated in by students.
+          contests, hackathons and other competitive
+          activities conducted or participated in by
+          students.
         </p>
 
         <a
@@ -332,6 +463,54 @@
 
     </div>
 
+
+    <!-- =================================================
+         INSTRUCTIONS
+         ================================================= -->
+
+    <div class="instructions">
+
+      <h3>
+        Important Instructions
+      </h3>
+
+      <ol>
+
+        <li>
+          Select the appropriate service above.
+        </li>
+
+        <li>
+          Enter your details carefully and verify
+          the information before submitting.
+        </li>
+
+        <li>
+          For achievement submissions, upload a clear
+          certificate or supporting document.
+        </li>
+
+        <li>
+          Ensure that the certificate contains the
+          student's name and event details wherever
+          possible.
+        </li>
+
+        <li>
+          Submit only genuine and verifiable
+          achievements.
+        </li>
+
+        <li>
+          For institute-level competitions, provide
+          accurate event and participation details.
+        </li>
+
+      </ol>
+
+    </div>
+
+
   </main>
 
 
@@ -345,7 +524,7 @@
       Department of Artificial Intelligence and Data Science
     </strong>
 
-    <br><br>
+    <br>
 
     Easwari Engineering College, Chennai
 
