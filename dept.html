@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AI&DS Faculty - Services</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f4f0;
+      color: #3e2723;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    .header {
+      width: 100%;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .header img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 240px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* MAIN */
+    .container {
+      max-width: 1100px;
+      margin: 45px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #4e342e;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: #6d4c41;
+      margin-bottom: 35px;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 32px 25px;
+      box-shadow: 0 5px 18px rgba(62, 39, 35, 0.12);
+      border: 1px solid #e4d8d2;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 9px 25px rgba(62, 39, 35, 0.18);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .card h2 {
+      color: #4e342e;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #6d4c41;
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 70px;
+      margin-bottom: 22px;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      padding: 13px 25px;
+      border-radius: 8px;
+      background: #795548;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #5d4037;
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      background: #4e342e;
+      transform: translateY(0);
+    }
+
+    /* INFORMATION SECTION */
+    .info {
+      margin-top: 45px;
+      background: #ffffff;
+      border-left: 5px solid #795548;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: left;
+      box-shadow: 0 3px 12px rgba(62, 39, 35, 0.08);
+    }
+
+    .info h3 {
+      color: #4e342e;
+      margin-bottom: 12px;
+    }
+
+    .info ul {
+      padding-left: 20px;
+      color: #6d4c41;
+      line-height: 1.8;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 50px;
+      background: #4e342e;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    footer strong {
+      color: #ffffff;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 850px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        margin-top: 30px;
+      }
+
+      .title {
+        font-size: 27px;
+      }
+
+      .header img {
+        max-height: 180px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .header img {
+        max-height: 130px;
+      }
+
+      .title {
+        font-size: 23px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
+
+      .card {
+        padding: 27px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER IMAGE -->
+<style>
+
+  .header-banner {
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow: hidden;
+
+  }
+
+  .header-banner img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    object-position: center;
+
+  }
+
+</style>
+
+<div class="header-banner">
+
+  <img src="header-banner.png" alt="AI&DS Department Header">
+
+</div>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <h1 class="title">
+      AI&DS Department Portal
+    </h1>
+
+    <p class="subtitle">
+      Department of Artificial Intelligence and Data Science<br>
+      Easwari Engineering College
+    </p>
+
+
+    <!-- APPLICATION CARDS -->
+    <section class="cards">
+
+      <!-- Super Dream -->
+      <div class="card">
+
+        <div class="icon">SuperDream.png</div>
+
+        <h2>Super Dream Batch</h2>
+
+        <p>
+         Track the Activities assigned to Super Dream Batch Students
+        </p>
+
+        <a
+          class="btn"
+          href="https://script.google.com/a/macros/eec.srmrmp.edu.in/s/AKfycbxdJlT75wLsGP_Y_Ir8Lk6vUMvLf8UrQnInyjtiC6DiBanKVr2cDTKMXY7WvCKt-nzc/exec"
+          target="_blank"
+          rel="noopener noreferrer">
+          Click Here!
+        </a>
+
+      </div>
+
+
+      <!-- Dream -->
+      <div class="card">
+
+        <div class="icon">Dream.png</div>
+
+        <h2>Dream Batch</h2>
+
+        <p>
+          Track the Activities assigned to Dream Batch Students
+        </p>
+
+        <a
+          class="btn"
+          href=""
+          target="_blank"
+          rel="noopener noreferrer">
+          Click Here!
+        </a>
+
+      </div>
+
+
+      <!-- Upcoming Events -->
+      <div class="card">
+
+        <div class="icon">🎯</div>
+
+        <h2>Upcoming Events</h2>
+
+        <p>
+          Under Development
+        </p>
+
+        <a
+          class="btn"
+          href=""
+          target="_blank"
+          rel="noopener noreferrer">
+          List of Upcoming Events
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- INFORMATION -->
+    <section class="info">
+
+      <h3>General Instructions</h3>
+
+      <ul>
+        <li>
+          Please select the appropriate application based on your activity.
+        </li>
+
+        
+      </ul>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <strong>Department of Artificial Intelligence and Data Science</strong><br>
+    Easwari Engineering College, Chennai<br><br>
+
+    © 2026 AI&DS Department. All Rights Reserved.
+
+  </footer>
+
+</body>
+</html>
